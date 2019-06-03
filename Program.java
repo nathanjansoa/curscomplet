@@ -4,9 +4,10 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Program {
+	static Scanner sc = new Scanner(System.in);
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
 		saidaDados();
+		scaner();
 		sc.close();
 	}
 	
@@ -32,19 +33,26 @@ public class Program {
 	
 	//Scaner
 	public static void scaner() {
+		Locale.setDefault(Locale.US);
 		Util.titulo("Scanner");
 		Util.textLn("Enter your full name:");
+		String name = sc.nextLine().toString();
 		// Alex Green
 		Util.textLn("How many bedrooms are there in your house?");
+		int bedroon = sc.nextInt();
 		// 3
 		Util.textLn("Enter product price:");
+		double price = sc.nextDouble();
 		// 500.50
 		Util.textLn("Enter your last name, age and height (same line):");
-		// Green 21 1.73
-		// SAÍDA ESPERADA (NÚMEROS REAIS
-		// COM DUAS CASAS DECIMAIS):
-		// Alex Green
-		// 3
-		// 500.50
+		String last = sc.next();
+		int age = sc.nextInt();
+		double height = sc.nextDouble();
+		System.out.println(name);
+		System.out.println(bedroon);
+		System.out.println(price);
+		System.out.println(last);
+		System.out.println(age);
+		System.out.println(height);
 	}
 }
